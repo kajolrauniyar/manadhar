@@ -1,0 +1,131 @@
+.section{
+	&-gallery{
+		padding-bottom: 50px;
+	}
+}
+.gallery-list{
+	margin-bottom: 30px;
+	@include breakpoint(600) {
+		// width: 100%;
+	}
+	&__inner{
+		position: relative;
+		.image-holder {
+			img{
+				@include breakpoint(991) {
+					width: 100%;
+				}
+			}
+		}
+		.mask {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			overflow: hidden;
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba($primary, 0.9);
+				z-index: 0;
+				opacity: 0;
+				-webkit-transition: all .30s ease;
+				-moz-transition: all .30s ease;
+				-ms-transition: all .30s ease;
+				-o-transition: all .30s ease;
+				transition: all .30s ease;
+			}
+			h3{
+				@include rem("font-size", 20);
+				font-weight: $w600;
+				margin: 0 0 2px;
+			}
+			p{
+				@include rem("font-size", 14);
+				font-weight: $w300;
+			}
+			&_text {
+				z-index: 1;
+				position: absolute;
+				color: $white;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				padding: 0 15px 10px;
+				-webkit-transform: translateY(100%);
+				-moz-transform: translateY(100%);
+				-ms-transform: translateY(100%);
+				-o-transform: translateY(100%);
+				transform: translateY(100%);
+				-webkit-transition: all .40s ease;
+				-moz-transition: all .40s ease;
+				-ms-transition: all .40s ease;
+				-o-transition: all .40s ease;
+				transition: all .40s ease;
+			}
+			&_link {
+				position: absolute;
+				z-index: 2;
+				@include rem("font-size", 28);
+				left: 50%;
+				top: 50%;
+				color: $white;
+				-webkit-transform: translate(-50%, -50%) scale(0);
+				-moz-transform: translate(-50%, -50%) scale(0);
+				-ms-transform: translate(-50%, -50%) scale(0);
+				-o-transform: translate(-50%, -50%) scale(0);
+				transform: translate(-50%, -50%) scale(0);
+				-webkit-transition: all .45s ease-in;
+				-moz-transition: all .45s ease-in;
+				-ms-transition: all .45s ease-in;
+				-o-transition: all .45s ease-in;
+				transition: all .45s ease-in;
+			}
+		}
+		&:hover {
+			.mask {
+				&:before{
+					opacity: 1;
+				}
+				&_text {
+					-webkit-transform: translateY(0);
+					-moz-transform: translateY(0);
+					-ms-transform: translateY(0);
+					-o-transform: translateY(0);
+					transform: translateY(0);
+				}
+				&_link {
+					-webkit-transform: translate(-50%, -50%) scale(1);
+					-moz-transform: translate(-50%, -50%) scale(1);
+					-ms-transform: translate(-50%, -50%) scale(1);
+					-o-transform: translate(-50%, -50%) scale(1);
+					transform: translate(-50%, -50%) scale(1);
+				}
+			}
+		}
+	}
+	&__small {
+		@include breakpoint(767) {
+			width: 50%;
+		}
+		@include breakpoint(550) {
+			width: 100%;
+		}
+		.mask {
+			h3{
+				@include rem("font-size", 16);
+				font-weight: $w600;
+				margin: 0 0 2px;
+			}
+			p{
+				@include rem("font-size", 12);
+				font-weight: $w300;
+			}
+		}
+	}
+}

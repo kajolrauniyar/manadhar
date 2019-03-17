@@ -1,0 +1,305 @@
+@media screen and (max-width: 1170px) {
+  .siteIntro {
+    @at-root #{&}__img {
+      img {
+        width: 100%;
+    }
+}
+@at-root #{&}__content {
+  padding-top: 7%;
+  h1 {
+    font-size: 30px;
+}
+p {
+    font-size: 15px;
+}
+}
+}
+.sitebg {
+    background-size: 30%;
+}
+.sidebar {
+    @at-root #{&}__innerImg {
+      margin-right: 5px;
+      width: 90px;
+      img {
+        width: 100%;
+    }
+}
+@at-root #{&}__innertxt {
+  .heading {
+    font-size: 12px;
+}
+ul {
+    li {
+      padding-right: 10px;
+      &:after {
+        right: 3px;
+    }
+}
+}
+}
+}
+.socialNav {
+    a {
+      margin-right: 2px;
+      width: 34px;
+      height: 33px;
+      i {
+        font-size: 15px;
+    }
+}
+}
+
+}
+@media screen and (max-width: 998px) {   
+ .fullwidth {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.grid {
+    @at-root #{&}-item {
+        width: calc(50% - 30px);
+    }
+}
+ul {
+    &.sidebar {
+        margin-top: 30px;
+    }
+}
+.sidebar {
+    @at-root #{&}__contentHolder {
+        width: 48%;
+        float: left;
+        margin-right: 25px;
+
+        &:nth-child(odd) {
+            margin-right: 0px;
+        }
+    }
+}
+.news {
+    background-size: cover !important;
+}
+
+.copyright {
+    p {
+        text-align: center !important;
+    }
+}
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    img {
+      margin-right: 10px;
+      vertical-align: middle;
+      width: 70px;
+  }
+  @at-root #{&}__heading {
+    font-size: 23px;
+}
+}
+.grid {
+    @at-root #{&}-item {
+        width: calc(100% - 30px);
+        margin: 0 15px 30px 15px;
+    }
+}
+.subscribeForm {
+   input {
+    width: 288px;
+}
+}
+.sidebar {
+    @at-root #{&}__contentHolder {
+        width: 100%;
+        margin-right: 0px;
+    }
+}
+
+.content-right {
+    margin-top: 0;
+}
+.search {
+    @at-root #{&}__input {
+        padding: 10px 48px 10px 13px;
+    }
+    @at-root #{&}__icon {
+        padding: 10px 13px;
+    }
+}
+.socialNav {
+    margin-top: 3px;
+}
+.container {
+    overflow: visible;
+}
+.navMenu {
+    @at-root #{&}__holder {
+        a {
+            font-size: 14px;
+            padding: 5px 20px;
+        }
+    }
+}
+.mainBanner {
+ @at-root #{&}__slider {
+    border: 3px solid #fff;
+}
+@at-root #{&}__intro {
+    top: 29%;
+    max-width: 228px;
+}
+@at-root #{&}__introHead {
+    font-size: 14px;
+    padding: 5px;
+}
+@at-root #{&}__introtxt {
+    padding: 5px;
+    font-size: 11px;
+}
+}
+.siteIntro {
+ @at-root #{&}__content {
+    h1 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 13px;
+        text-align: left;
+    }
+}
+}
+.section {
+    @at-root #{&}__heading {
+        h2 {
+            font-size: 25px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+}
+.news {
+ @at-root #{&}__details {
+
+ }
+}
+.album {
+    @at-root #{&}__thumb {
+        max-height: 314px;
+    }
+    @at-root #{&}__preview {
+        max-height: 108px;
+    }
+    @at-root #{&}__heading {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    @at-root #{&}__expand {
+        i {
+            padding: 5px 8px;
+        }
+        span {
+            padding: 4px 8px;
+        }
+    }
+}
+.slick-slide {
+ img {
+    width: 100%;
+}
+}
+.newsSlider {
+    @at-root #{&}__item {
+        &:after {
+            width: 54px;
+        }
+    }
+}
+}
+@media screen and (max-width: 668px) {
+    .padCustomL {
+        display: none;
+    }
+    .album__thumb {
+        max-height: 100%;
+    }
+    .padCustomR {
+        padding-right: 15px;
+    }
+    .slick-prev,
+    .slick-next {
+        z-index: 99;
+    }
+
+    .slick-prev {
+        left: 0px;
+    }
+    .slick-next {
+        right: 0px;
+    }
+    .slick-prev:after,
+    .slick-next:after {
+        color: #fff;
+    }
+    .publications .slick-prev:after,
+    .publications .slick-next:after  {
+        color: #e12a29;
+    }
+    .ad__lg {
+        margin-bottom: 30px;
+    }
+    .slideMenu {
+        max-width: 100%;
+        min-width: 100%;
+        right: -100%;
+        z-index: 9999;
+    }
+    .navMenu {
+        height: 20px;
+    }
+    .navMenu__holder {
+        display: none;
+    }
+    .logo {
+        text-align: center;
+    }
+    .logo__heading {
+        display: inline-block;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .search {
+        text-align: center;
+        margin-top: 20px;
+    }
+    label {
+        position: relative;
+        display: inline-block;
+    }
+    header .socialNav {
+        text-align: center;
+    }
+    .mainBanner__intro {
+        display: none;
+    }
+    .siteIntro__img img {
+        width: 42%;
+    } 
+    .siteIntro__content,
+    .siteIntro__img,
+    .siteIntro__content p {
+        text-align: center;
+    }
+    .news__details p.heading {
+        font-size: 16px;
+    }
+    .news__details ul.infotxt {
+        font-size: 11px;
+    }
+    .subscribeForm input {
+        width: 240px;
+    }
+}
